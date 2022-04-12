@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/background.ts"],
+  "sourcesContent": ["chrome.action.onClicked.addListener((tab) => {\n  chrome.notifications.create({\n    type: 'basic',\n    iconUrl: './images/kari.png',\n    title: 'Thank you for using extension!',\n    message: 'Nothing here.',\n    priority: 1\n  })\n});"],
+  "mappings": "AAAA,OAAO,OAAO,UAAU,YAAY,CAAC,QAAQ;AAC3C,SAAO,cAAc,OAAO;AAAA,IAC1B,MAAM;AAAA,IACN,SAAS;AAAA,IACT,OAAO;AAAA,IACP,SAAS;AAAA,IACT,UAAU;AAAA,EACZ,CAAC;AACH,CAAC;",
+  "names": []
+}

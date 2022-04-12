@@ -1,0 +1,29 @@
+{
+  "name": "dendai-unipa-extension",
+  "version": "0.0.1",
+  "repository": "https://github.com/kazuemon/dendai-unipa-extension",
+  "author": "kazuemon <git@k6n.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.181",
+    "@types/cpx": "^1.5.2",
+    "cpx": "^1.5.0",
+    "esbuild": "^0.14.34",
+    "sass": "^1.50.0",
+    "tiny-glob": "^0.2.9",
+    "typescript": "^4.6.3",
+    "yarn-run-all": "^3.1.1"
+  },
+  "scripts": {
+    "watch": "run-p watch:*",
+    "watch:ts": "node esbuild/watch.js",
+    "watch:sass": "sass --watch src/styles:dist/styles",
+    "watch:json": "cpx src/manifest.json dist --watch",
+    "watch:img": "cpx 'src/images/*.png' dist/images --watch",
+    "build": "run-p build:*",
+    "build:ts": "node esbuild/build.js",
+    "build:sass": "sass src/styles:dist/styles",
+    "build:json": "cpx src/manifest.json dist",
+    "build:img": "cpx 'src/images/*.png' dist/images"
+  }
+}

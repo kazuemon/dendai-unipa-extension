@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "dendai-unipa-extension",
+  "version": "0.0.1",
+  "description": "Chrome extension for DENDAI-UNIPA",
+  "action": {},
+  "permissions": [
+    "scripting",
+    "tabs",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://portal.sa.dendai.ac.jp/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://portal.sa.dendai.ac.jp/*"
+      ],
+      "js": [
+        "main.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
