@@ -2,8 +2,10 @@ import { UnipaPage } from "./types/UnipaPage";
 
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
 
-  if (changeInfo.status !== 'complete') return;
   if (!tab.url?.startsWith('https://portal.sa.dendai.ac.jp/')) return;
+  if (changeInfo.status !== 'complete') return;
+  // TODO: 検出方法の改善
+  if (tab.url?.endsWith('#')) return;
 
   const test = await chrome.scripting.executeScript({
     files: ['./scripts/getPage.js'],

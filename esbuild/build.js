@@ -3,10 +3,10 @@ const glob = require('tiny-glob');
 
 (async () => {
   build({
-    entryPoints: await glob('./src/**/*.ts'),
+    entryPoints: await glob('./src/!(types)/**/*.ts'),
     platform: 'browser',
     bundle: false,
-    sourcemap: true,
+    sourcemap: 'inline',
     outdir: './dist',
   });
 })();
