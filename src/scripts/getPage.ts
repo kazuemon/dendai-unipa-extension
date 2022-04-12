@@ -3,81 +3,81 @@ import { UnipaPage } from '../types/UnipaPage';
 {
   const PageList: UnipaPage[] = [
     {
-      key: 'keiji',
+      key: 'BULLETIN_LIST',
       pageTitle: '掲示一覧',
-      scripts: ['./scripts/pages/keiji.js'],
-      styles: ['./styles/pages/keiji.css'],
+      scripts: ['./scripts/pages/bulletin-list.js'],
+      styles: ['./styles/pages/bulletin-list.css'],
     },
     {
-      key: 'error',
+      key: 'ERROR',
       pageTitle: 'エラー',
     },
     {
-      key: 'login',
+      key: 'LOGIN',
       pageTitle: 'ログイン',
     },
     {
-      key: 'gakuseki',
+      key: 'GAKUSEKI',
       pageTitle: '学籍情報照会',
     },
     {
-      key: 'about-gakuseki',
+      key: 'ABOUT_GAKUSEKI',
       pageTitle: '説明画面',
       subTitle: '学籍情報照会について[Pkx005]',
     },
     {
-      key: 'safety-confirm',
+      key: 'SAFETY_CONFIRM',
       pageTitle: '安否確認回答一覧',
     },
     {
-      key: 'about-timetable',
+      key: 'ABOUT_TIMETABLE',
       pageTitle: '説明画面',
       subTitle: '時間割について[Pkx005]',
     },
     {
-      key: 'reg-other-cource',
+      key: 'REG_OTHER_COURSE',
       pageTitle: '他学部他学科等履修申請',
     },
     {
-      key: 'student-timetable',
+      key: 'STUDENT_TIMETABLE',
       pageTitle: '学生時間割表',
     },
     {
-      key: 'classes-timetable',
+      key: 'CLASSES_TIMETABLE',
       pageTitle: '授業時間割表',
     },
     {
-      key: 'search-teacher',
+      key: 'SEARCH_TEACHER',
       pageTitle: '教職員検索',
     },
     {
-      key: 'syllabus',
+      key: 'SYLLABUS',
       pageTitle: 'シラバス検索',
     },
     {
-      key: 'about-attend-log',
+      key: 'ABOUT_ATTEND_LOG',
       pageTitle: '説明画面',
       subTitle: '出席管理について[Pkx005]',
     },
     {
-      key: 'attend-log',
+      key: 'ATTEND_LOG',
       pageTitle: '出欠状況確認',
     },
     {
-      key: 'about-grades-inquiry',
+      key: 'ABOUT_GRADES_INQUIRY',
       pageTitle: '説明画面',
       subTitle: '成績照会について[Pkx005]',
     },
     {
-      key: 'grades-inquiry',
+      key: 'GRADES_INQUIRY',
       pageTitle: '成績照会',
     },
     {
-      key: 'my-step',
+      key: 'MY_STEP',
       pageTitle: 'マイステップ一覧',
     },
     {
-      key: 'settings',
+      key: 'SETTINGS',
       pageTitle: '個人設定',
     },
   ];
