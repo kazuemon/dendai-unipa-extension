@@ -7,7 +7,8 @@
   "permissions": [
     "scripting",
     "tabs",
-    "notifications"
+    "notifications",
+    "activeTab"
   ],
   "host_permissions": [
     "https://portal.sa.dendai.ac.jp/*"
