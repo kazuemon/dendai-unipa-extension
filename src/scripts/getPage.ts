@@ -35,6 +35,10 @@ import { UnipaPage } from '../types/UnipaPage';
       subTitle: '時間割について[Pkx005]',
     },
     {
+      key: 'REG_COURSE',
+      pageTitle: '履修登録',
+    },
+    {
       key: 'REG_OTHER_COURSE',
       pageTitle: '他学部他学科等履修申請',
     },
