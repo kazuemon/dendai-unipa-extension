@@ -9,14 +9,6 @@ import { UnipaPage } from '../types/UnipaPage';
       styles: ['./styles/pages/bulletin-list.css'],
     },
     {
-      key: 'ERROR',
-      pageTitle: 'エラー',
-    },
-    {
-      key: 'LOGIN',
-      pageTitle: 'ログイン',
-    },
-    {
       key: 'GAKUSEKI',
       pageTitle: '学籍情報照会',
     },
@@ -91,7 +83,7 @@ import { UnipaPage } from '../types/UnipaPage';
     const isErrorPage = document.title === 'Error Page';
     if (isErrorPage)
       return {
-        key: 'error',
+        key: 'ERROR',
         pageTitle: 'エラー',
       };
 
@@ -99,7 +91,7 @@ import { UnipaPage } from '../types/UnipaPage';
     const loginElement = document.getElementById('loginForm');
     if (loginElement)
       return {
-        key: 'login',
+        key: 'LOGIN',
         pageTitle: 'ログイン',
       };
 
@@ -113,9 +105,10 @@ import { UnipaPage } from '../types/UnipaPage';
     if (!headerElement) return null;
     if (headerElement instanceof HTMLSpanElement) {
       const pageName = headerElement.textContent;
-      const subTitle = headerSubElement && headerSubElement instanceof HTMLHeadingElement
-        ? headerSubElement.textContent?.trim()
-        : undefined;
+      const subTitle =
+        headerSubElement && headerSubElement instanceof HTMLHeadingElement
+          ? headerSubElement.textContent?.trim()
+          : undefined;
       const matchedPage = PageList.find((p) => {
         if (p.subTitle !== undefined) {
           return p.subTitle === subTitle && p.pageTitle === pageName;
