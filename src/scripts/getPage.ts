@@ -113,17 +113,14 @@ import { UnipaPage } from '../types/UnipaPage';
     if (!headerElement) return null;
     if (headerElement instanceof HTMLSpanElement) {
       const pageName = headerElement.textContent;
+      const subTitle = headerSubElement && headerSubElement instanceof HTMLHeadingElement
+        ? headerSubElement.textContent?.trim()
+        : undefined;
       const matchedPage = PageList.find((p) => {
-        if (
-          p.subTitle !== undefined &&
-          headerSubElement &&
-          headerSubElement instanceof HTMLHeadingElement
-        ) {
-          const subTitle = headerSubElement.textContent?.trim();
-          if (p.subTitle !== subTitle) return false;
+        if (p.subTitle !== undefined) {
+          return p.subTitle === subTitle && p.pageTitle === pageName;
         }
-        if (p.pageTitle === pageName) return true;
-        return false;
+        return p.pageTitle === pageName;
       });
       if (!matchedPage) return null;
       return matchedPage;
